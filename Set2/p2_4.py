@@ -1,5 +1,9 @@
 def largest_number(input_list):
-    best_so_far = 0
+    best_so_far = -9999999999999999999999999999999
+
+    if len(input_list) <= 1:
+        return None
+
     for i in input_list:
         if i > best_so_far:
             best_so_far = i
