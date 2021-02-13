@@ -62,3 +62,105 @@ class Matrix:
         transpostaFinal = Matrix(transposta)
         print(transpostaFinal)
         return transpostaFinal
+    
+    
+    #Função para somar matrizes
+    def add(self, other):
+        #checagem do tipo da instância do outro objeto recebido por argumento
+        
+        #se other for do tipo Matrix:
+        if isinstance(other, Matrix):
+            
+            #Se a Matrix em questão for do mesmo tamanho da matrix recebida (other)
+            #### CHAMA A FUNÇÃO SIZE DEFINIDA NO INÍCIO DO PROBLEMA PARA COMPARAR
+            #O TAMANHO E DIMENSÃO DAS MATRIZES SELF E OTHER
+            if self.size() == other.size():
+                #realiza adição de matrizes
+                linhas = self.size()[0]
+                colunas = self.size()[1]
+                adicionada = Matrix(self.matriz)
+                
+                #percorre toda a matriz
+                for linha in range(linhas):
+                    for coluna in range(colunas):
+                        #soma cada item da matriz original com os itens correspondente da matriz Other
+                        adicionada.matriz[linha][coluna] += other.matriz[linha][coluna]
+                return adicionada
+            
+            #caso os tamanhos checados de Self e Other sejam diferentes,
+            # retorna nulo/None
+            else:
+                return None
+            
+        #caso o argumento Other seja um número único int ou float,
+        # adiciona other a cada elemento da matriz
+        elif isinstance(other, int) or isinstance(other, float):
+            #cria uma variável nova para guardar o resultado da soma
+            adcComum = Matrix(self.matriz)
+            #percorre todos os elementos da matriz self em questão
+            for linhas in range(self.size()[0]):
+                for colunas in range(self.size()[1]):
+                    #realiza a soma do valor de Other em tds os elementos da matriz original
+                    adcComum.matriz[linhas][colunas] += other
+            return adcComum
+        
+        else:
+            return None
+        
+    #mudando a dunder function nativa do Python para funcionar apenas com matrizes
+    def __add__(self, other):
+        #chama a função add definida para somar duas matrizes ou 1 matriz e 1 número
+        adicionado =  self.add(other)
+        return adicionado
+    
+    
+    #Copiei a função de add e substitui todos os operadores de adição por subtração
+    def sub(self, other):
+        #checagem do tipo da instância do outro objeto recebido por argumento
+        
+        #se other for do tipo Matrix:
+        if isinstance(other, Matrix):
+            
+            #Se a Matrix em questão for do mesmo tamanho da matrix recebida (other)
+            #### CHAMA A FUNÇÃO SIZE DEFINIDA NO INÍCIO DO PROBLEMA PARA COMPARAR
+            #O TAMANHO E DIMENSÃO DAS MATRIZES SELF E OTHER
+            if self.size() == other.size():
+                #realiza adição de matrizes
+                linhas = self.size()[0]
+                colunas = self.size()[1]
+                subtraida = Matrix(self.matriz)
+                
+                #percorre toda a matriz
+                for linha in range(linhas):
+                    for coluna in range(colunas):
+                        #soma cada item da matriz original com os itens correspondente da matriz Other
+                        subtraida.matriz[linha][coluna] -= other.matriz[linha][coluna]
+                return subtraida
+            
+            #caso os tamanhos checados de Self e Other sejam diferentes,
+            # retorna nulo/None
+            else:
+                return None
+            
+        #caso o argumento Other seja um número único int ou float,
+        # subtrai other a cada elemento da matriz
+        elif isinstance(other, int) or isinstance(other, float):
+            #cria uma variável nova para guardar o resultado da soma
+            subComum = Matrix(self.matriz)
+            #percorre todos os elementos da matriz self em questão
+            for linhas in range(self.size()[0]):
+                for colunas in range(self.size()[1]):
+                    #realiza a soma do valor de Other em tds os elementos da matriz original
+                    subComum.matriz[linhas][colunas] -= other
+            return subComum
+        
+        else:
+            return None
+        
+    #mudando a dunder function nativa do Python para funcionar apenas com matrizes
+    def __sub__(self, other):
+        #chama a função add definida para somar duas matrizes ou 1 matriz e 1 número
+        subtraido = self.sub(other)
+        return subtraido
+            
+        
