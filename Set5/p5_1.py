@@ -12,22 +12,22 @@ def run_langton(rules, size):
     # ou seja, o angulo formado entre o eixo X e Y
     angulo = 90
 
-    # DIREÇÃO SERÁ COMPUTADA ATRAVÃ‰S DO RESTO DA DIVISÃƒO POR 360
+    # DIREÇÃO SERÁ COMPUTADA ATRAVÉS DO RESTO DA DIVISÃO POR 360
     # norte = 90
     # oeste = 180
     # sul = 270
     # leste = 0 / 360
 
-    # inicializaÃ§Ã£o do contador de passos da formiguinha do capeta
+    # inicialização do contador de passos da formiguinha do capeta
     marcaPasso = 0
-    valorColorido = []  # guarda as cores, que nÃ£o Ã£o apenas 'preto' e 'branco'
+    valorColorido = []  # guarda as cores, que não são apenas 'preto' e 'branco'
     tabuleiro = []
 
-    # cria o tabuleiro a partir do tamanho passado como argumento na funÃ§Ã£o principal
+    # cria o tabuleiro a partir do tamanho passado como argumento na função principal
     def gera_tabuleiro():
         # percorre todas as linhas e
         for linha in range(size):
-            # adiciona um espaÃ§o vazio
+            # adiciona um espaço vazio
             valorColorido.append([])
             # agora acessa cada elemento da matriz e os inicializa com cor 0
             for coluna in range(size):
@@ -42,20 +42,20 @@ def run_langton(rules, size):
         # LÃ³gica do Matheus castello no Piazza
         valorColorido[formiY][formiX] = valorColorido[formiY][formiX] % len(rules)
 
-    # cria um tabuleiro a partir do Size passado no inÃ­cio
+    # cria um tabuleiro a partir do Size passado no início
     gera_tabuleiro()
     # atualiza a cor dos elementos
     atualiza_cor()
-    # o ponto inicial precisa ser contado como um passo, entÃ£o marca passo Ã© incrementado
+    # o ponto inicial precisa ser contado como um passo, então marca passo é incrementado
 
     # inicializado com um passo extra, uma vez que o teste
     # pede o passo em que a formiga saiu do tabuleiro
     marcaPasso = marcaPasso + 1
     formiY = formiY - 1
 
-    #### aaaaaaaaaaaaaah nÃ£o sei o que fazer agora pqpqp
+    #### aaaaaaaaaaaaaah não sei o que fazer agora pqpqp
     # bora dormir
-    # acordei de cabeÃ§a limpa e pensamento claro
+    # acordei de cabeça limpa e pensamento claro
     # apelaÃ§Ã£o para casos base
     if size == 1:
         # retorna que terÃ¡ apenas um movimento para sair do tabuleiro
