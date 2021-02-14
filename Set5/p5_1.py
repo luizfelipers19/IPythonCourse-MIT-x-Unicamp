@@ -1,18 +1,18 @@
-# Formiguinha do LangtÃ£o
+# Formiguinha do Langton
 
 def run_langton(rules, size):
     # inicializa a formiguinha do capeta no meio do tabuleiro,
-    # a partir do ponto mÃ©dio de Size
+    # a partir do ponto médio de Size
     # (0,0)
     formiX = size // 2
     formiY = size // 2
 
-    # formiguinha inicia virada para cima. Usando como referÃªncia
-    # o eixo X do plano cartesiano, a direÃ§Ã£o norte seria 90Âº,
+    # formiguinha inicia virada para cima. Usando como referência
+    # o eixo X do plano cartesiano, a direção norte seria 90º,
     # ou seja, o angulo formado entre o eixo X e Y
     angulo = 90
 
-    # DIREÃ‡ÃƒO SERÃ COMPUTADA ATRAVÃ‰S DO RESTO DA DIVISÃƒO POR 360
+    # DIREÇÃO SERÁ COMPUTADA ATRAVÃ‰S DO RESTO DA DIVISÃƒO POR 360
     # norte = 90
     # oeste = 180
     # sul = 270
