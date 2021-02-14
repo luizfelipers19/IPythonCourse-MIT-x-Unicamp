@@ -56,21 +56,21 @@ def run_langton(rules, size):
     #### aaaaaaaaaaaaaah não sei o que fazer agora pqpqp
     # bora dormir
     # acordei de cabeça limpa e pensamento claro
-    # apelaÃ§Ã£o para casos base
+    # apelação para casos base
     if size == 1:
-        # retorna que terÃ¡ apenas um movimento para sair do tabuleiro
+        # retorna que terá apenas um movimento para sair do tabuleiro
         return (1, [[1]])
-    # retorna uma lista com  movimento vazio e o valor da casa serÃ¡ 0
+    # retorna uma lista com  movimento vazio e o valor da casa será 0
     elif size == 0:
         return (0, [])
 
-    ### O ERRO ESTAVA AQUI!! ANTES ESTAVA FAZENDO UMA ITERAÃ‡ÃƒO ENTRE A STRING DE REGRAS
-    # E DEVERIA ESTAR CHECANDO AS CONDIÃ‡~ES EXPRESSAS NO ENUNCIADO
+    ### O ERRO ESTAVA AQUI!! ANTES ESTAVA FAZENDO UMA ITERAÇÃO ENTRE A STRING DE REGRAS
+    # E DEVERIA ESTAR CHECANDO AS CONDIÇÕES EXPRESSAS NO ENUNCIADO
 
-    # CORRIGIDO COM AJUDA DE PEDRO HENRIQUE LIMA, VICTOR E CARLOS. Obrigado amigos, vocÃªs sÃ£o amigos.
+    # CORRIGIDO COM AJUDA DE PEDRO HENRIQUE LIMA, VICTOR E CARLOS. Obrigado amigos, vocês são amigos.
 
     # LOOP PRINCIPAL
-    # Enquanto a posiÃ§Ã£o da formiga ainda estiver contida no tabuleiro
+    # Enquanto a posição da formiga ainda estiver contida no tabuleiro
     while (size - 1) >= formiX >= 0 and (size - 1) >= formiY >= 0:
 
         casaCor = valorColorido[formiY][formiX]
@@ -80,17 +80,17 @@ def run_langton(rules, size):
         if rules[casaCor] == 'L':
             angulo = angulo - 90
 
-        # pega o valor da soma dos Ã¢ngulos e normaliza, ao dividir por 360
-        # e pegar o resto da divisÃ£o, para saber qual o Ã¢ngulo atual
+        # pega o valor da soma dos ângulos e normaliza, ao dividir por 360
+        # e pegar o resto da divisão, para saber qual o ângulo atual
         anguloNormalizado = angulo % 360
 
-        # chama a funÃ§Ã£o de atualizar a cor para somar +1 ao valor da casa atual
+        # chama a função de atualizar a cor para somar +1 ao valor da casa atual
         atualiza_cor()
 
-        # Computa o prÃ³x passo da formiga, ou seja,
-        # atualiza o valor da posiÃ§Ã£o X ou Y, dependendo do Ã¢nguloNormalizado retornado
+        # Computa o próx passo da formiga, ou seja,
+        # atualiza o valor da posiÃ§Ã£o X ou Y, dependendo do ânguloNormalizado retornado
 
-        # Incrementa o eixoX anda um para a direita se o Ã¢ngulo apontar para a direita
+        # Incrementa o eixoX anda um para a direita se o ângulo apontar para a direita
         if anguloNormalizado == 0:
             # formiX += 1
             formiX = formiX + 1
