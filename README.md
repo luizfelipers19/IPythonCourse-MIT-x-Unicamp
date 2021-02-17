@@ -9,4 +9,4 @@ The exercises and study material can be found at http://web.mit.edu/~armelin/pyt
 
 
 ![python](https://user-images.githubusercontent.com/26651389/106839477-0ffb3a80-667d-11eb-994b-1f90a8dd2caf.jpg)
-![image](https://user-images.githubusercontent.com/26651389/108149308-4db28700-70b1-11eb-8cd2-7179f5b643b1.png)
+![resized-image-Promo](https://user-images.githubusercontent.com/26651389/108149504-c285c100-70b1-11eb-8387-f604a8b27d46.jpeg)
