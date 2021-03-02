@@ -1,8 +1,8 @@
 # IPythonCourse-MIT-x-Unicamp
 
-This repository is intended for my Python exercises regarding the MIT x UNICAMP workshop about the Python Programming Language. 
+This repository is intended for my Python exercises regarding the MIT x UNICAMP bootcamp about the Python Programming Language. 
 
-The MIT course certificate will only be granted to the students who get a minimum average grade of 8.0 at the end of the course.
+The MIT course certificate will only be granted to the students who get a minimum average grade of 8.0 at the end of the course, considering participation, practical tasks and final test.
 
 The exercises and study material can be found at http://web.mit.edu/~armelin/python_intro_iap/ 
 ## Focus! Just dewit!
